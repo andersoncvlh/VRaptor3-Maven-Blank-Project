@@ -6,26 +6,33 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Listagem de Pessoas</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	</head>
 	<body>
 		
-		<form action="list">
-			<fieldset>
+		<form action="list" >
+			<div class="form-group">
 				<label for="nomeIpt" >Nome</label>
-				<input id="nomeIpt" name="pessoa.nome" />
-				
-				<button>Pesquisar</button>
-				<button>Limpar</button>
-				<button>Novo</button>
-			</fieldset>
+				<input id="nomeIpt" class="form-control" name="pessoa.nome" />
+			</div>	
+			
+			<div class="btn-group">
+				<button type="submit" class="btn btn-secondary" >
+					<i class="fas fa-search"></i> Pesquisar
+				</button>
+				<a class="btn btn-primary" href="#" role="button" >
+					<i class="fas fa-plus"></i> Novo
+				</a>
+			</div>
 		</form>
 	
-		<table>
-			<thead>
+		<table class="table table-striped table-hover table-bordered" >
+			<thead class="table-dark" >
 				<tr>
-					<th>Nome</th>
-					<th>CPF</th>
-					<th>E-mail</th>
+					<th class="col" >Nome</th>
+					<th class="col" >CPF</th>
+					<th class="col" >E-mail</th>
 				</tr>
 			</thead>
 			<tbody>
