@@ -1,4 +1,4 @@
-package br.com.javacoder.moneymanagement;
+package br.com.javacoder.moneymanagement.controller;
 
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
@@ -10,6 +10,5 @@ public class IndexController {
 	@Get
 	@Path("/")
 	public void index() {
-		System.out.println("VRaptor works");
 	}
 }
