@@ -8,17 +8,17 @@
 		<title>Listagem de Pessoas</title>
 	</head>
 	<body>
-		<label for="nomeIpt" >Nome</label>
-		<input id="nomeIpt" />
 		
-		<label for="cpfIpt" >CPF</label>
-		<input id="cpfIpt" />
-		
-		<label for="emailIpt" >Email</label>
-		<input id="emailIpt" />
-		
-		<button >Pesquisar</button>
-		<button >Limpar</button>
+		<form action="list">
+			<fieldset>
+				<label for="nomeIpt" >Nome</label>
+				<input id="nomeIpt" name="pessoa.nome" />
+				
+				<button>Pesquisar</button>
+				<button>Limpar</button>
+				<button>Novo</button>
+			</fieldset>
+		</form>
 	
 		<table>
 			<thead>

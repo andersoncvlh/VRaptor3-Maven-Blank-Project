@@ -13,9 +13,22 @@ public class PessoaController {
 
 	@Get
 	@Path("/pessoa/list")
-	public List<Pessoa> list() {
-		PessoaService pessoaService = new PessoaService();
-		return pessoaService.list();
+	public List<Pessoa> list(final Pessoa pessoa) {
+		if (null != pessoa) {
+			return pesquisarPorFiltro(pessoa);
+		}
+		return pesquisarTodas();
 	}
-	
+
+	private List<Pessoa> pesquisarPorFiltro(Pessoa pessoa) {
+		PessoaService pessoaService = new PessoaService();
+		List<Pessoa> lista = pessoaService.listByFilter(pessoa);
+		return lista;
+	}
+
+	private List<Pessoa> pesquisarTodas() {
+		PessoaService pessoaService = new PessoaService();
+		return pessoaService.listAll();
+	}
+
 }
